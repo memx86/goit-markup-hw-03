@@ -9,180 +9,210 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
     <header class="secondary-background">
-      <!-- Меню навигации -->
-      <nav>
-        <a href="./index.html" class="link logo"
-          ><span class="accent-text">Web</span><span class="logo-text">Studio</span></a
-        >
+      <div class="container">
+        <!-- Меню навигации -->
+        <nav>
+          <a href="./index.html" class="link logo"
+            ><span class="accent-text">Web</span><span class="logo-text">Studio</span></a
+          >
+          <ul class="list header-text">
+            <li>
+              <a href="./index.html" class="link secondary-text hover-accent focus-accent"
+                >Студия</a
+              >
+            </li>
+            <li>
+              <a
+                href="./portfolio.html"
+                class="link current secondary-text hover-accent focus-accent"
+                aria-current="page"
+                >Портфолио</a
+              >
+            </li>
+            <li><a href="" class="link secondary-text hover-accent focus-accent">Контакты</a></li>
+          </ul>
+        </nav>
+        <!-- Контакты -->
         <ul class="list header-text">
           <li>
-            <a href="./index.html" class="link secondary-text hover-accent focus-accent">Студия</a>
-          </li>
-          <li>
-            <a
-              href="./portfolio.html"
-              class="link current secondary-text hover-accent focus-accent"
-              aria-current="page"
-              >Портфолио</a
+            <a href="mailto:info@devstudio.com" class="link main-text hover-accent focus-accent"
+              >info@devstudio.com</a
             >
           </li>
-          <li><a href="" class="link secondary-text hover-accent focus-accent">Контакты</a></li>
+          <li>
+            <a href="tel:+380961111111" class="link main-text hover-accent focus-accent"
+              >+38 096 111 11 11</a
+            >
+          </li>
         </ul>
-      </nav>
-      <!-- Контакты -->
-      <ul class="list header-text">
-        <li>
-          <a href="mailto:info@devstudio.com" class="link main-text hover-accent focus-accent"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a href="tel:+380961111111" class="link main-text hover-accent focus-accent"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      </div>
     </header>
     <!-- Портфолио -->
     <main>
-      <section>
-        <h1 class="secondary-text concealer">Портфолио</h1>
-        <!-- Фильтр -->
-        <ul class="list">
-          <li><button class="filter secondary-text crew" type="button">Все</button></li>
-          <li><button class="filter secondary-text crew" type="button">Веб-сайты</button></li>
-          <li><button class="filter secondary-text crew" type="button">Приложения</button></li>
-          <li><button class="filter secondary-text crew" type="button">Дизайн</button></li>
-          <li><button class="filter secondary-text crew" type="button">Маркетинг</button></li>
-        </ul>
-        <!--Собственно портфолио -->
-        <ul class="list portfolio">
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img src="./images/portfolio/project1.jpg" width="370" height="294" alt="Технокряк" />
-              <h2 class="secondary-text">Технокряк</h2>
-              <p class="portfolio-text">Веб-сайт</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project2.jpg"
-                width="370"
-                height="294"
-                alt="Постер New Orlean vs Golden Star"
-              />
-              <h2 class="secondary-text">Постер New Orlean vs Golden Star</h2>
-              <p class="portfolio-text">Дизайн</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project3.jpg"
-                width="370"
-                height="294"
-                alt="Ресторан Seafood"
-              />
-              <h2 class="secondary-text">Ресторан Seafood</h2>
-              <p class="portfolio-text">Приложение</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project4.jpg"
-                width="370"
-                height="294"
-                alt="Проект Prime"
-              />
-              <h2 class="secondary-text">Проект Prime</h2>
-              <p class="portfolio-text">Маркетинг</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project5.jpg"
-                width="370"
-                height="294"
-                alt="Проект Boxes"
-              />
-              <h2 class="secondary-text">Проект Boxes</h2>
-              <p class="portfolio-text">Приложение</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project6.jpg"
-                width="370"
-                height="294"
-                alt="Inspiration has no Borders"
-              />
-              <h2 class="secondary-text">Inspiration has no Borders</h2>
-              <p class="portfolio-text">Веб-сайт</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project7.jpg"
-                width="370"
-                height="294"
-                alt="Издание Limited Edition"
-              />
-              <h2 class="secondary-text">Издание Limited Edition</h2>
-              <p class="portfolio-text">Дизайн</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project8.jpg"
-                width="370"
-                height="294"
-                alt="Проект LAB"
-              />
-              <h2 class="secondary-text">Проект LAB</h2>
-              <p class="portfolio-text">Маркетинг</p>
-            </a>
-          </li>
-          <li class="secondary-background">
-            <a href="" class="link">
-              <img
-                src="./images/portfolio/project9.jpg"
-                width="370"
-                height="294"
-                alt="Growing Business"
-              />
-              <h2 class="secondary-text">Growing Business</h2>
-              <p class="portfolio-text">Приложение</p>
-            </a>
-          </li>
-        </ul>
+      <section class="section">
+        <div class="container">
+          <h1 class="secondary-text concealer">Портфолио</h1>
+          <!-- Фильтр -->
+          <ul class="filter list">
+            <li>
+              <button class="button filter-button secondary-text crew" type="button">Все</button>
+            </li>
+            <li>
+              <button class="button filter-button secondary-text crew" type="button">
+                Веб-сайты
+              </button>
+            </li>
+            <li>
+              <button class="button filter-button secondary-text crew" type="button">
+                Приложения
+              </button>
+            </li>
+            <li>
+              <button class="button filter-button secondary-text crew" type="button">Дизайн</button>
+            </li>
+            <li>
+              <button class="button filter-button secondary-text crew" type="button">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <!--Собственно портфолио -->
+          <ul class="list portfolio">
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project1.jpg"
+                  width="370"
+                  height="294"
+                  alt="Технокряк"
+                />
+                <h2 class="secondary-text">Технокряк</h2>
+                <p class="portfolio-text">Веб-сайт</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project2.jpg"
+                  width="370"
+                  height="294"
+                  alt="Постер New Orlean vs Golden Star"
+                />
+                <h2 class="secondary-text">Постер New Orlean vs Golden Star</h2>
+                <p class="portfolio-text">Дизайн</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project3.jpg"
+                  width="370"
+                  height="294"
+                  alt="Ресторан Seafood"
+                />
+                <h2 class="secondary-text">Ресторан Seafood</h2>
+                <p class="portfolio-text">Приложение</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project4.jpg"
+                  width="370"
+                  height="294"
+                  alt="Проект Prime"
+                />
+                <h2 class="secondary-text">Проект Prime</h2>
+                <p class="portfolio-text">Маркетинг</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project5.jpg"
+                  width="370"
+                  height="294"
+                  alt="Проект Boxes"
+                />
+                <h2 class="secondary-text">Проект Boxes</h2>
+                <p class="portfolio-text">Приложение</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project6.jpg"
+                  width="370"
+                  height="294"
+                  alt="Inspiration has no Borders"
+                />
+                <h2 class="secondary-text">Inspiration has no Borders</h2>
+                <p class="portfolio-text">Веб-сайт</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project7.jpg"
+                  width="370"
+                  height="294"
+                  alt="Издание Limited Edition"
+                />
+                <h2 class="secondary-text">Издание Limited Edition</h2>
+                <p class="portfolio-text">Дизайн</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project8.jpg"
+                  width="370"
+                  height="294"
+                  alt="Проект LAB"
+                />
+                <h2 class="secondary-text">Проект LAB</h2>
+                <p class="portfolio-text">Маркетинг</p>
+              </a>
+            </li>
+            <li class="secondary-background">
+              <a href="" class="link">
+                <img
+                  src="./images/portfolio/project9.jpg"
+                  width="370"
+                  height="294"
+                  alt="Growing Business"
+                />
+                <h2 class="secondary-text">Growing Business</h2>
+                <p class="portfolio-text">Приложение</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <!-- Футер -->
     <footer class="hero-background">
-      <a href="./index.html" class="link logo"
-        ><span class="accent-text">Web</span><span class="footer-text">Studio</span></a
-      >
-      <address>
-        <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
-        <a href="mailto:info@example.com" class="link footer-link hover-accent focus-accent"
-          >info@example.com</a
+      <div class="container">
+        <a href="./index.html" class="link logo"
+          ><span class="accent-text">Web</span><span class="footer-text">Studio</span></a
         >
-        <br />
-        <a href="tel:+380991111111" class="link footer-link hover-accent focus-accent"
-          >+38 099 111 11 11</a
-        >
-      </address>
+        <address>
+          <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
+          <a href="mailto:info@example.com" class="link footer-link hover-accent focus-accent"
+            >info@example.com</a
+          >
+          <br />
+          <a href="tel:+380991111111" class="link footer-link hover-accent focus-accent"
+            >+38 099 111 11 11</a
+          >
+        </address>
+      </div>
     </footer>
   </body>
 </html>

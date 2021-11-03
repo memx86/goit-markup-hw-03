@@ -15,8 +15,10 @@
   --hero-text-color: #ffffff;
   /* заливка героя #2F303A */
   --hero-background-color: #2f303a;
+  /* заливка кнопки героя при фокусе #188CE8 */
+  --hero-button-hover-color: #188ce8;
   /* заливка команды */
-  --crew-background-color: #f5f4fa;
+  --team-background-color: #f5f4fa;
   /* цвет ссылок в футере */
   --footer-link-color: rgba(255, 255, 255, 0.6);
 }
@@ -35,9 +37,10 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-/* убирает точки у списков */
+/* убирает точки и левый отступ у списков*/
 .list {
   list-style: none;
+  padding: 0;
 }
 /* убирает подчеркивание ссылок */
 .link {
@@ -50,6 +53,20 @@ body {
   width: 1px;
   margin: -1px;
   padding: 0;
+}
+/* обнуление внешних отступов */
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* закругленные края кнопок */
+.button {
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 /* смена цвета текста */
 .main-text {
@@ -69,10 +86,7 @@ body {
 .focus-accent:focus {
   color: var(--accent-color);
 }
-/* выделение текущей страницы в навигации */
-.link.current {
-  color: var(--accent-color);
-}
+
 /* вторичные цвета заливки */
 .secondary-background {
   background-color: var(--secondary-background-color);
@@ -83,25 +97,52 @@ body {
 .accent-background {
   background-color: var(--accent-color);
 }
+/* контейнер для центрирования и ограничения контента по ширине */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 3px solid red;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* стили шапки */
+header {
+  border-bottom: 1px solid #ececec;
+}
 .logo {
   font-family: raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
+/* выделение текущей страницы в навигации */
+.link.current {
+  color: var(--accent-color);
+}
 .header-text {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 /* стили героя */
 .hero-text {
   color: var(--hero-text-color);
+  text-align: center;
+}
+.hero-title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -113,12 +154,14 @@ body {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+  width: 200px;
+  height: 50px;
 }
 .hero-button:hover,
 .hero-button:focus,
 .hero-button:active {
-  color: var(--accent-color);
-  background-color: var(--hero-text-color);
+  /* color: var(--accent-color); */
+  background-color: var(--hero-button-hover-color);
 }
 /* стили особенностей */
 .feature-title {
@@ -126,62 +169,92 @@ body {
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.feature-item {
+  width: 270px;
 }
 /* стили чем мы занимаемся */
-.crew-title {
+.team-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  margin-bottom: 50px;
 }
 /* стили команды */
-.crew {
-  background-color: var(--crew-background-color);
+.team {
+  background-color: var(--team-background-color);
   font-size: 16px;
   line-height: 1.19;
 }
-.crew h3 {
+.teamcard {
+  width: 270px;
+  border-bottom: 1px solid transparent;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.team h3 {
   font-weight: 500;
   font-size: inherit;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
-
 /* стили футера */
-.footer-link {
-  color: var(--footer-link-color);
-  font-style: normal;
+footer {
+  padding: 60px 0;
 }
 .footer-text {
   color: var(--hero-text-color);
   font-style: normal;
 }
+footer > address {
+  margin-top: 20px;
+}
+.footer-link {
+  color: var(--footer-link-color);
+  font-style: normal;
+  margin-top: 9px;
+}
 /* стили портфолио */
 /* фильтр */
 /* смена цвета кнопок при hover focus */
-.filter:hover,
-.filter:focus,
-.filter:active {
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
 }
 /*стили кнопок*/
-.filter {
+.filter-button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  /* letter-spacing: inherit; */
   letter-spacing: 0.03em;
   cursor: pointer;
+  padding: 5px 21px;
+}
+/* нижний отступ от фильтра */
+.filter {
+  margin-bottom: 34px;
 }
 /* собственно портфолио */
-/* стили текста в блоках портфолио */
+
+/* стили блоков портфолио */
 .portfolio h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 .portfolio-text {
   color: var(--main-text-color);
   font-size: 16px;
   line-height: 1.87;
+}
+.portfolio > li {
+  border: 1px solid #eeeeee;
+  width: 370px;
 }
