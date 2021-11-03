@@ -1,0 +1,187 @@
+:root {
+  /* основной цвет текста #757575 */
+  --main-text-color: #757575;
+  /* вторичный цвет текста #212121 */
+  --secondary-text-color: #212121;
+  /* акцент #2196F3 */
+  --accent-color: #2196f3;
+  /* цвет лого */
+  --logo-text-color: #000000;
+  /* основной цвет заливки #E5E5E5 */
+  /* --main-background-color: #e5e5e5; */
+  /* вторичный цвет заливки #FFFFFF */
+  --secondary-background-color: #ffffff;
+  /* цвет текста героя */
+  --hero-text-color: #ffffff;
+  /* заливка героя #2F303A */
+  --hero-background-color: #2f303a;
+  /* заливка команды */
+  --crew-background-color: #f5f4fa;
+  /* цвет ссылок в футере */
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+}
+
+/* стилизация всей страницы */
+
+/* roboto 400,500,700,900 */
+/* raleway 700 */
+body {
+  /* background-color: var(--main-background-color); */
+  color: var(--main-text-color);
+  /* системные шрифты font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
+  font-family: roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, noto, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+/* убирает точки у списков */
+.list {
+  list-style: none;
+}
+/* убирает подчеркивание ссылок */
+.link {
+  text-decoration: none;
+}
+/* скрывает визуально контент */
+.concealer {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+}
+/* смена цвета текста */
+.main-text {
+  color: var(--main-text-color);
+}
+.accent-text {
+  color: var(--accent-color);
+}
+.logo-text {
+  color: var(--logo-text-color);
+}
+.secondary-text {
+  color: var(--secondary-text-color);
+}
+/* смена цвета на accent при hover focus */
+.hover-accent:hover,
+.focus-accent:focus {
+  color: var(--accent-color);
+}
+/* выделение текущей страницы в навигации */
+.link.current {
+  color: var(--accent-color);
+}
+/* вторичные цвета заливки */
+.secondary-background {
+  background-color: var(--secondary-background-color);
+}
+.hero-background {
+  background-color: var(--hero-background-color);
+}
+.accent-background {
+  background-color: var(--accent-color);
+}
+/* стили шапки */
+.logo {
+  font-family: raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.header-text {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+/* стили героя */
+.hero-text {
+  color: var(--hero-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-button {
+  color: var(--hero-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.hero-button:hover,
+.hero-button:focus,
+.hero-button:active {
+  color: var(--accent-color);
+  background-color: var(--hero-text-color);
+}
+/* стили особенностей */
+.feature-title {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+/* стили чем мы занимаемся */
+.crew-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+/* стили команды */
+.crew {
+  background-color: var(--crew-background-color);
+  font-size: 16px;
+  line-height: 1.19;
+}
+.crew h3 {
+  font-weight: 500;
+  font-size: inherit;
+}
+
+/* стили футера */
+.footer-link {
+  color: var(--footer-link-color);
+  font-style: normal;
+}
+.footer-text {
+  color: var(--hero-text-color);
+  font-style: normal;
+}
+/* стили портфолио */
+/* фильтр */
+/* смена цвета кнопок при hover focus */
+.filter:hover,
+.filter:focus,
+.filter:active {
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
+}
+/*стили кнопок*/
+.filter {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  /* letter-spacing: inherit; */
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+/* собственно портфолио */
+/* стили текста в блоках портфолио */
+.portfolio h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-text {
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 1.87;
+}
