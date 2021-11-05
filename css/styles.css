@@ -90,7 +90,6 @@ p {
 .focus-accent:focus {
   color: var(--accent-color);
 }
-
 /* вторичные цвета заливки */
 .secondary-background {
   background-color: var(--secondary-background-color);
@@ -111,7 +110,6 @@ p {
   /* outline: 3px solid red; */
 }
 /* контейнер секций */
-
 .section {
   padding-top: 94px;
 }
@@ -125,7 +123,7 @@ p {
 /* конец Утилит */
 
 /* стили шапки */
-header {
+header .container {
   border-bottom: 1px solid #ececec;
 }
 .logo {
@@ -142,17 +140,17 @@ header {
   color: var(--accent-color);
 }
 /* стиль текста шапки + центрирование по высоте */
-.header-text {
+.header-list {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   align-items: center;
 }
 /* отступы шапки */
-.site-nav > a {
+.site-nav .link {
   margin-right: 93px;
 }
-header li:not(:last-child) {
+.header-list > .item:not(:last-child) {
   margin-right: 50px;
 }
 .site-nav {
@@ -162,7 +160,7 @@ header li:not(:last-child) {
   margin-top: auto;
   margin-bottom: auto;
 }
-.header-text .link {
+.header-list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -247,14 +245,14 @@ header li:not(:last-child) {
 .teamcard:not(:last-child) {
   margin-right: 30px;
 }
-.team h3 {
+.teamcard > h3 {
   font-weight: 500;
   font-size: inherit;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 /* стили футера */
-footer {
+footer .container {
   padding: 60px 0;
 }
 .footer-text {
