@@ -112,8 +112,6 @@ p {
 /* контейнер секций */
 .section {
   padding-top: 94px;
-}
-.section:last-child {
   padding-bottom: 94px;
 }
 /* задание свойства флекс */
@@ -123,7 +121,7 @@ p {
 /* конец Утилит */
 
 /* стили шапки */
-header .container {
+header {
   border-bottom: 1px solid #ececec;
 }
 .logo {
@@ -203,6 +201,9 @@ header .container {
   background-color: var(--hero-button-hover-color);
 }
 /* стили особенностей */
+.feature.section {
+  padding-bottom: 47px;
+}
 .feature-title {
   font-weight: 700;
   font-size: inherit;
@@ -217,6 +218,9 @@ header .container {
   margin-right: 30px;
 }
 /* стили чем мы занимаемся */
+.what.section {
+  padding-top: 47px;
+}
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -226,7 +230,17 @@ header .container {
   margin-right: auto;
   text-align: center;
 }
-.what-item:not(:last-child) {
+.what-item {
+  width: calc((100% - 60px) / 3);
+}
+.what-item > img,
+.teamcard > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.what-item:not(:last-child),
+.teamcard:not(:last-child) {
   margin-right: 30px;
 }
 /* стили команды */
@@ -241,9 +255,8 @@ header .container {
   border-bottom: 1px solid transparent;
   border-radius: 4px;
   padding-bottom: 30px;
-}
-.teamcard:not(:last-child) {
-  margin-right: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .teamcard > h3 {
   font-weight: 500;
@@ -269,12 +282,14 @@ footer address {
 }
 /* стили портфолио */
 /* фильтр */
-/* смена цвета кнопок при hover focus */
+/* эффекты кнопок при hover focus */
 .filter-button:hover,
 .filter-button:focus,
 .filter-button:active {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*стили кнопок*/
 .filter-button {
