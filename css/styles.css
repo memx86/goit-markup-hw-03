@@ -121,7 +121,7 @@ p {
 /* конец Утилит */
 
 /* стили шапки */
-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
 .logo {
@@ -182,7 +182,7 @@ header {
   margin-right: auto;
   width: 696px;
 }
-.hero-button {
+.hero .button {
   color: var(--hero-text-color);
   font-family: inherit;
   font-weight: 700;
@@ -190,13 +190,16 @@ header {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
-  width: 200px;
-  height: 50px;
+  /* у самой кнопки с классом .button граница 1 px */
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.hero-button:hover,
-.hero-button:focus,
-.hero-button:active {
+.hero .button:hover,
+.hero .button:focus,
+.hero .button:active {
   /* color: var(--accent-color); */
   background-color: var(--hero-button-hover-color);
 }
@@ -265,14 +268,14 @@ header {
   margin-bottom: 10px;
 }
 /* стили футера */
-footer .container {
+.footer {
   padding: 60px 0;
 }
 .footer-text {
   color: var(--hero-text-color);
   font-style: normal;
 }
-footer address {
+.footer .address {
   margin-top: 20px;
 }
 .footer-link {
@@ -283,31 +286,29 @@ footer address {
 /* стили портфолио */
 /* фильтр */
 /* эффекты кнопок при hover focus */
-.filter-button:hover,
-.filter-button:focus,
-.filter-button:active {
+.filter .button:hover,
+.filter .button:focus,
+.filter .button:active {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*стили кнопок*/
-.filter-button {
+.filter .button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
   cursor: pointer;
+  /* у самой кнопки с классом .button граница 1 px */
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 21px;
   padding-right: 21px;
 }
-.filter-button:not(:last-child) {
-  margin-right: 9px;
-}
-/* нижний отступ от фильтра */
+/* отступы и позиционирование фильтра */
 .filter {
   margin-bottom: 34px;
   margin-left: auto;
@@ -315,7 +316,8 @@ footer address {
   display: flex;
   justify-content: center;
 }
-.filter > li:not(:last-child) {
+/* отступы между кнопками фильтра  */
+.filter > .item:not(:last-child) {
   margin-right: 8px;
 }
 /* собственно портфолио */
@@ -328,7 +330,6 @@ footer address {
 .portfolio-item {
   width: calc((100% - 60px) / 3);
 }
-
 .portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -337,6 +338,8 @@ footer address {
 }
 .portfolio-item img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .portfolio-item h2 {
   font-weight: 700;
@@ -350,7 +353,6 @@ footer address {
   font-size: 16px;
   line-height: 1.87;
 }
-
 .portfolio-border {
   padding-top: 20px;
   padding-bottom: 20px;
