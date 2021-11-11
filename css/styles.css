@@ -37,6 +37,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
 /* Утилиты */
 /* убирает точки и левый отступ у списков*/
 .list {
@@ -72,34 +73,6 @@ p {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-/* смена цвета текста */
-.main-text {
-  color: var(--main-text-color);
-}
-.accent-text {
-  color: var(--accent-color);
-}
-.logo-text {
-  color: var(--logo-text-color);
-}
-.secondary-text {
-  color: var(--secondary-text-color);
-}
-/* смена цвета на accent при hover focus */
-.hover-accent:hover,
-.focus-accent:focus {
-  color: var(--accent-color);
-}
-/* вторичные цвета заливки */
-.secondary-background {
-  background-color: var(--secondary-background-color);
-}
-.hero-background {
-  background-color: var(--hero-background-color);
-}
-.accent-background {
-  background-color: var(--accent-color);
-}
 /* контейнер для центрирования и ограничения контента по ширине */
 .container {
   width: 1200px;
@@ -128,54 +101,66 @@ p {
 
 /* стили шапки */
 .header {
+  background-color: var(--secondary-background-color);
   border-bottom: 1px solid #ececec;
 }
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+/* логотип */
 .logo {
   font-family: raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
-.site-nav > .logo {
-  align-items: center;
-}
-/* выделение текущей страницы в навигации */
-.link.current {
+.logo-accent {
   color: var(--accent-color);
 }
-/* стиль текста шапки + центрирование по высоте */
+.logo-text {
+  color: var(--logo-text-color);
+}
+.header-logo {
+  margin-right: 93px;
+}
+/* выделение текущей страницы в навигации */
+.header-link.header-link--current {
+  color: var(--accent-color);
+}
+
 .header-list {
+  display: flex;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   align-items: center;
 }
-/* отступы шапки */
-.site-nav .link {
-  margin-right: 93px;
-}
-.header-list > .item:not(:last-child) {
+.header-item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav {
-  margin-right: auto;
-}
-.site-nav .logo {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.header-list .link {
+.header-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  color: var(--secondary-text-color);
+}
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+.header-link--contacts {
+  color: var(--main-text-color);
 }
 
 /* стили героя */
 .hero {
-  color: var(--hero-text-color);
-  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
+  color: var(--hero-text-color);
+  background-color: var(--hero-background-color);
 }
 .hero-title {
   font-weight: 900;
@@ -187,19 +172,20 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.hero .button {
+.hero-button {
+  /* у самой кнопки с классом .button граница 1 px */
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   color: var(--hero-text-color);
+  background-color: var(--accent-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
-  /* у самой кнопки с классом .button граница 1 px */
-  padding-left: 31px;
-  padding-right: 31px;
-  padding-top: 9px;
-  padding-bottom: 9px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .hero .button:hover,
@@ -209,15 +195,19 @@ p {
   background-color: var(--hero-button-hover-color);
 }
 /* стили особенностей */
-.feature.section {
+.feature {
   padding-bottom: 47px;
 }
-.feature-title {
+.feature-list {
+  display: flex;
+}
+.feature-subtitle {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  color: var(--secondary-text-color);
 }
 .feature-item {
   width: calc((100% - 90px) / 4);
@@ -225,27 +215,33 @@ p {
 .feature-item:not(:last-child) {
   margin-right: 30px;
 }
-/* стили чем мы занимаемся и команды*/
-.what.section {
-  padding-top: 47px;
-}
-/* заголовок секции*/
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+
+/* заголовок секций */
+.title {
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
   text-align: center;
+  color: var(--secondary-text-color);
 }
-/* ширина карточки чем мы занимаемся  */
+
+/* стили чем мы занимаемся*/
+.what {
+  padding-top: 47px;
+}
+.what-list {
+  display: flex;
+}
+/* ширина карточки */
 .what-item {
   width: calc((100% - 60px) / 3);
 }
 /* оступы между карточками */
 .what-item:not(:last-child),
-.teamcard:not(:last-child) {
+.team-item:not(:last-child) {
   margin-right: 30px;
 }
 /* стили команды */
@@ -255,64 +251,52 @@ p {
   line-height: 1.19;
   text-align: center;
 }
+.team-list {
+  display: flex;
+}
 /* стили карточки команды */
-.teamcard {
+.team-item {
   width: calc((100% - 90px) / 4);
   border-bottom: 1px solid transparent;
   border-radius: 4px;
   padding-bottom: 30px;
+  background-color: var(--secondary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 /* имя члена команды */
-.teamcard > h3 {
-  font-weight: 500;
-  font-size: inherit;
+.team-subtitle {
   margin-top: 30px;
   margin-bottom: 10px;
+  font-weight: 500;
+  font-size: inherit;
+  color: var(--secondary-text-color);
 }
 /* стили футера */
 .footer {
   padding: 60px 0;
+  background-color: var(--hero-background-color);
 }
 .footer-text {
   color: var(--hero-text-color);
   font-style: normal;
 }
-.footer .address {
+.address {
   margin-top: 20px;
 }
 .footer-link {
+  margin-top: 9px;
   color: var(--footer-link-color);
   font-style: normal;
-  margin-top: 9px;
 }
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
+
 /* стили портфолио */
 /* фильтр */
-/* эффекты кнопок при hover focus */
-.filter .button:hover,
-.filter .button:focus,
-.filter .button:active {
-  color: var(--hero-text-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-/*стили кнопок*/
-.filter .button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  /* у самой кнопки с классом .button граница 1 px */
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 21px;
-  padding-right: 21px;
-}
-/* отступы и позиционирование фильтра */
+
 .filter {
   margin-bottom: 34px;
   margin-left: auto;
@@ -320,13 +304,35 @@ p {
   display: flex;
   justify-content: center;
 }
+/*стили кнопок*/
+.filter-button {
+  /* у самой кнопки с классом .button граница 1 px */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 21px;
+  padding-right: 21px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  color: var(--secondary-text-color);
+}
+/* эффекты кнопок при hover focus */
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 /* отступы между кнопками фильтра  */
-.filter > .item:not(:last-child) {
+.filter-item:not(:last-child) {
   margin-right: 8px;
 }
-/* собственно портфолио */
 
-/* стили блоков портфолио */
+/* собственно портфолио */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -334,6 +340,7 @@ p {
 /* ширина карточки */
 .portfolio-item {
   width: calc((100% - 60px) / 3);
+  background-color: var(--secondary-background-color);
 }
 /* оступы между карточками */
 .portfolio-item:not(:nth-child(3n)) {
@@ -343,12 +350,13 @@ p {
   margin-bottom: 30px;
 }
 /* название продукта */
-.portfolio-item h2 {
+.portfolio-subtitle {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-bottom: 4px;
+  color: var(--secondary-text-color);
 }
 /* тип продукта */
 .portfolio-text {
