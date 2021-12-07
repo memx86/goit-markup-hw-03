@@ -161,14 +161,15 @@ p {
   background-color: var(--hero-background-color);
 }
 .hero-title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .hero-button {
   /* у самой кнопки с классом .button граница 1 px */
